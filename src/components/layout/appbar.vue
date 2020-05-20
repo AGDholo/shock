@@ -1,0 +1,98 @@
+<template>
+  <div>
+    <v-navigation-drawer
+      v-if="!$vuetify.breakpoint.smAndUp"
+      v-model="drawer"
+      :clipped="$vuetify.breakpoint.lgAndUp"
+      app
+      color="primary"
+      dark
+    >
+      <v-list nav color="primary">
+        <v-list-item
+          v-for="(item, i) in btnItems"
+          :key="i"
+          link
+          :to="item.to"
+          :href="item.href"
+          :target="item.target"
+        >
+          <v-list-item-content>
+            <v-list-item-title>{{ item.text }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar
+      fixed
+      app
+      flat
+      hide-on-scroll
+      class="appbar"
+      :clipped-left="$vuetify.breakpoint.lgAndUp"
+      color="primary"
+      dark
+    >
+      <v-container>
+        <v-row align="center" justify="space-between">
+          <v-col class="d-flex align-center">
+            <v-app-bar-nav-icon
+              @click.stop="drawer = !drawer"
+              v-if="!$vuetify.breakpoint.smAndUp"
+            />
+            <v-toolbar-title
+              style="cursor: pointer"
+              class="font-weight-bold headline"
+            >
+              <v-icon large color="secondary">
+                mdi-feather
+              </v-icon>
+              Hero<span class="secondary--text">UI</span>
+            </v-toolbar-title>
+          </v-col>
+          <v-col class="text-right" v-if="$vuetify.breakpoint.smAndUp">
+            <v-btn
+              v-for="(item, i) in btnItems"
+              :key="i"
+              :outlined="item.outlined"
+              :to="item.to"
+              :href="item.href"
+              :target="item.target"
+              :color="item.color"
+              class="ml-3 text-capitalize"
+            >
+              <v-icon left>
+                {{ item.icon }}
+              </v-icon>
+              {{ item.text }}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-app-bar>
+  </div>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    drawer: null,
+    btnItems: [
+      {
+        outlined: true,
+        text: "Components",
+        to: "/components",
+        icon: "mdi-view-list",
+      },
+      {
+        text: "Free Download",
+        href: "https://github.com/heroui/shock",
+        target: "_black",
+        color: "secondary",
+        icon: "mdi-download",
+      },
+    ],
+  }),
+};
+</script>
