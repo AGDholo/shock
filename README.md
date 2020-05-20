@@ -1,10 +1,10 @@
-# HeroUI - Shock(Work In Progress)
+# [HeroUI - Shock](https://shock.heroui.net/)
 
 Shock is a complete application template, Shock theme built with [Vuetify](https://vuetifyjs.com/) created by [HeroUI](https://heroui.net/). It comes as a complete solution, with front pages and dashboard pages included. Shock features a huge number of components built to fit together and look amazing. If you are a new business looking to create your online presence or you just want to let people know who you are and what you do, this might be the answer for you.
 
 ## Preview
 
-**View Live Preview (Work In Progress)**
+**[View Live Preview](https://shock.heroui.net/)**
 
 ## Usage
 
