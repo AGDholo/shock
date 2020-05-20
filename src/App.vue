@@ -507,8 +507,15 @@
         </v-row>
 
         <div class="text-center mt-6">
-          Copyright &copy; HreoUI {{ new Date().getFullYear() }}. All rights
-          reserved.
+          Copyright &copy;
+          <a
+            class="white--text"
+            href="https://heroui.net"
+            target="_blank"
+            rel="noopener noreferrer"
+            >HreoUI</a
+          >
+          {{ new Date().getFullYear() }}. All rights reserved.
         </div>
       </v-container>
     </v-footer>
