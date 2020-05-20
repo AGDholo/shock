@@ -443,6 +443,7 @@
                   :key="i"
                   :href="item.href"
                   dense
+                  target="_black"
                 >
                   <v-list-item-content>
                     <v-list-item-title
@@ -464,6 +465,7 @@
                   :key="i"
                   :href="item.href"
                   dense
+                  target="_black"
                 >
                   <v-list-item-content>
                     <v-list-item-title
