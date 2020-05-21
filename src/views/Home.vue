@@ -88,7 +88,11 @@
                     Front Demo
                   </v-btn>
 
-                  <v-btn outlined large class="ml-3">
+                  <v-btn
+                    outlined
+                    large
+                    :class="{ 'ml-3': $vuetify.breakpoint.smAndUp }"
+                  >
                     <v-icon left>
                       mdi-apps
                     </v-icon>
@@ -124,12 +128,7 @@
 
           <div class="my-12 text-center">
             <v-row>
-              <v-col
-                cols="6"
-                md="3"
-                v-for="(item, i) in frontFreature"
-                :key="i"
-              >
+              <v-col cols="6" md="3" v-for="(item, i) in frontFeature" :key="i">
                 <v-avatar size="88" class="elevation-4">
                   <v-icon color="secondary" large>
                     {{ item.icon }}
@@ -178,7 +177,11 @@
                     Dashboard Demo
                   </v-btn>
 
-                  <v-btn outlined large class="ml-3">
+                  <v-btn
+                    outlined
+                    large
+                    :class="{ 'ml-3': $vuetify.breakpoint.smAndUp }"
+                  >
                     <v-icon left>
                       mdi-apps
                     </v-icon>
@@ -223,7 +226,7 @@
               <v-col
                 cols="6"
                 md="3"
-                v-for="(item, i) in dashboardFreature"
+                v-for="(item, i) in dashboardFeature"
                 :key="i"
               >
                 <v-avatar size="88" class="elevation-4">
@@ -268,12 +271,7 @@
 
         <div>
           <v-row justify="center" align="center">
-            <v-col
-              cols="6"
-              md="3"
-              v-for="(item, i) in awesomeFreature"
-              :key="i"
-            >
+            <v-col cols="6" md="3" v-for="(item, i) in awesomeFeature" :key="i">
               <v-card
                 min-height="300px"
                 class="d-flex align-center justify-center"
@@ -353,7 +351,7 @@
 export default {
   name: "Home",
   data: () => ({
-    frontFreature: [
+    frontFeature: [
       {
         text: "Front Pages",
         icon: "mdi-monitor",
@@ -375,7 +373,7 @@ export default {
         total: "Free",
       },
     ],
-    dashboardFreature: [
+    dashboardFeature: [
       {
         text: "Dashboard Pages",
         icon: "mdi-monitor",
@@ -397,7 +395,7 @@ export default {
         total: "Free",
       },
     ],
-    awesomeFreature: [
+    awesomeFeature: [
       {
         text: "Vuetify",
         icon: "mdi-vuetify",

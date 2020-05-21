@@ -16,7 +16,7 @@
           <v-col cols="12" md="3">
             <v-list flat color="transparent">
               <v-subheader class="title">HeroUI</v-subheader>
-              <v-list-item-group v-model="item" color="primary">
+              <v-list-item-group color="primary">
                 <v-list-item
                   v-for="(item, i) in heroui"
                   :key="i"
@@ -38,7 +38,7 @@
           <v-col cols="12" md="3">
             <v-list flat color="transparent">
               <v-subheader class="title">Shock</v-subheader>
-              <v-list-item-group v-model="item" color="primary">
+              <v-list-item-group color="primary">
                 <v-list-item
                   v-for="(item, i) in shock"
                   :key="i"

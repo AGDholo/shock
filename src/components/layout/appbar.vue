@@ -44,12 +44,40 @@
             <v-toolbar-title
               style="cursor: pointer"
               class="font-weight-bold headline"
+              @click="$router.push('/')"
             >
               <v-icon large color="secondary">
                 mdi-feather
               </v-icon>
               Hero<span class="secondary--text">UI</span>
             </v-toolbar-title>
+
+            <v-menu offset-y>
+              <template v-slot:activator="{ on }">
+                <v-btn
+                  color="primary"
+                  dark
+                  v-on="on"
+                  class="ml-3 text-capitalize"
+                  depressed
+                >
+                  Front pages
+
+                  <v-icon right>
+                    mdi-arrow-down-circle-outline
+                  </v-icon>
+                </v-btn>
+              </template>
+              <v-list>
+                <v-list-item
+                  :to="item.to"
+                  v-for="(item, index) in fontPages"
+                  :key="index"
+                >
+                  <v-list-item-title>{{ item.title }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
           </v-col>
           <v-col class="text-right" v-if="$vuetify.breakpoint.smAndUp">
             <v-btn
@@ -82,7 +110,7 @@ export default {
       {
         outlined: true,
         text: "Components",
-        to: "/components",
+        to: "",
         icon: "mdi-view-list",
       },
       {
@@ -91,6 +119,12 @@ export default {
         target: "_black",
         color: "secondary",
         icon: "mdi-download",
+      },
+    ],
+    fontPages: [
+      {
+        title: "Landing",
+        to: "/front/pages/index",
       },
     ],
   }),
