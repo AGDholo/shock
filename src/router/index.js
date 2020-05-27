@@ -15,6 +15,11 @@ const routes = [
     name: "front-pages-index",
     component: () => import("../views/front/pages/Index.vue"),
   },
+  {
+    path: "/front/pages/index-2",
+    name: "front-pages-index-2",
+    component: () => import("../views/front/pages/Index-2.vue"),
+  },
 ];
 
 const router = new VueRouter({

@@ -126,6 +126,10 @@ export default {
         title: "Landing",
         to: "/front/pages/index",
       },
+      {
+        title: "Landing 2",
+        to: "/front/pages/index-2",
+      },
     ],
   }),
 };
