@@ -130,6 +130,10 @@ export default {
         title: "Landing 2",
         to: "/front/pages/index-2",
       },
+      {
+        title: "sign-in",
+        to: "/front/pages/sign-in",
+      },
     ],
   }),
 };
