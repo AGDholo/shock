@@ -4,10 +4,10 @@
       <v-container>
         <v-row align="start">
           <v-col cols="12" md="3">
-            <h4 class="headline font-weight-bold">
+            <h4 class="text-h5 font-weight-bold">
               Shock
             </h4>
-            <p class="body-1">
+            <p class="text-body-1">
               Create, prototype, collaborate and turn your ideas into incredible
               products with the definitive platform for digital design.
             </p>
@@ -15,7 +15,7 @@
 
           <v-col cols="12" md="3">
             <v-list flat color="transparent">
-              <v-subheader class="title">HeroUI</v-subheader>
+              <v-subheader class="text-h6">HeroUI</v-subheader>
               <v-list-item-group color="primary">
                 <v-list-item
                   v-for="(item, i) in heroui"
@@ -26,7 +26,7 @@
                 >
                   <v-list-item-content>
                     <v-list-item-title
-                      class="body-1"
+                      class="text-body-1"
                       v-text="item.text"
                     ></v-list-item-title>
                   </v-list-item-content>
@@ -37,7 +37,7 @@
 
           <v-col cols="12" md="3">
             <v-list flat color="transparent">
-              <v-subheader class="title">Shock</v-subheader>
+              <v-subheader class="text-h6">Shock</v-subheader>
               <v-list-item-group color="primary">
                 <v-list-item
                   v-for="(item, i) in shock"
@@ -48,7 +48,7 @@
                 >
                   <v-list-item-content>
                     <v-list-item-title
-                      class="body-1"
+                      class="text-body-1"
                       v-text="item.text"
                     ></v-list-item-title>
                   </v-list-item-content>
@@ -59,10 +59,10 @@
 
           <v-col cols="12" md="3">
             <div>
-              <h5 class="title font-weight-bold">
+              <h5 class="text-h6 font-weight-bold">
                 Subscribe
               </h5>
-              <p class="body-1">
+              <p class="text-body-1">
                 The latest Rocket news, articles, and resources, sent straight
                 to your inbox every month.
               </p>

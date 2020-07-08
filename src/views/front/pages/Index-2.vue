@@ -9,13 +9,13 @@
 
           <v-col cols="12" md="6" lg="5" xl="4">
             <h1
-              class="display-3 font-weight-bold mb-3"
+              class="text-h2 font-weight-bold mb-3"
               style="line-height: 1.3;"
             >
               Tools to grow your traffic
             </h1>
 
-            <p class="title">
+            <p class="text-h6">
               Rocket helps you learn why your competitors rank so high and what
               you need to do to outrank them.
             </p>
@@ -40,11 +40,11 @@
     <v-sheet tile class="py-12">
       <v-container>
         <div class="text-center my-12">
-          <h2 class="display-2 font-weight-bold">
+          <h2 class="text-h3 font-weight-bold">
             Meet our intuitive platform
           </h2>
 
-          <p class="title my-6 text--secondary">
+          <p class="text-h6 my-6 text--secondary">
             Self-Service Analytics or ad hoc reporting gives users the ability
             to develop rapid <br />
             reports, empowering users to analyze their data.
@@ -54,18 +54,18 @@
         <div class="py-12">
           <v-row align="center" justify="space-between">
             <v-col cols="12" md="6" lg="5" xl="4">
-              <h2 class="display-1 font-weight-bold mb-3">
+              <h2 class="text-h4 font-weight-bold mb-3">
                 Site Audit
               </h2>
 
-              <p class="title text--secondary my-6">
+              <p class="text-h6 text--secondary my-6">
                 Site Audit crawls all the pages it finds on your website – then
                 provides an overall SEO health score, visualises key data in
                 charts, flags all possible SEO issues and provides
                 recommendations on how to fix them.
               </p>
 
-              <p class="title text--secondary">
+              <p class="text-h6 text--secondary">
                 Have a huge website? Not an issue.
               </p>
 
@@ -94,16 +94,16 @@
             </v-col>
 
             <v-col cols="12" md="6" lg="5" xl="4">
-              <h2 class="display-1 font-weight-bold mb-3">
+              <h2 class="text-h4 font-weight-bold mb-3">
                 Rank Tracker
               </h2>
 
-              <p class="title text--secondary my-6">
+              <p class="text-h6 text--secondary my-6">
                 We track your desktop and mobile keyword rankings from any
                 location and plot your full ranking history on a handy graph.
               </p>
 
-              <p class="title text--secondary">
+              <p class="text-h6 text--secondary">
                 You can set up automated ranking reports to be sent to your
                 email address, so you’ll never forget to check your ranking
                 progress.
@@ -124,12 +124,12 @@
             <v-col cols="12" md="4" v-for="(item, i) in features" :key="i">
               <v-card outlined class="pa-6 fill-height">
                 <v-card-title>
-                  <h2 class="display-3 font-weight-bold">
+                  <h2 class="text-h2 font-weight-bold">
                     {{ item.title }}
                   </h2>
                 </v-card-title>
 
-                <v-card-text class="title">
+                <v-card-text class="text-h6">
                   {{ item.text }}
                 </v-card-text>
               </v-card>
@@ -142,11 +142,11 @@
     <v-sheet tile class="py-12" color="transparent">
       <v-container>
         <div class="text-center my-12">
-          <h2 class="display-2 font-weight-bold">
+          <h2 class="text-h3 font-weight-bold">
             SEO solutions for every need
           </h2>
 
-          <p class="title my-6 text--secondary">
+          <p class="text-h6 my-6 text--secondary">
             We build best-in-class SEO software for every situation, from our
             all-in-one SEO <br />
             platform to tools for local SEO, enterprise SERP analytics, and a
@@ -162,11 +162,11 @@
                   src="https://cdn.pixabay.com/photo/2018/03/07/19/51/grass-3206938_1280.jpg"
                 ></v-img>
 
-                <v-card-title class="display-1">
+                <v-card-title class="text-h4">
                   Rocket Local
                 </v-card-title>
 
-                <v-card-text class="subtitle-1">
+                <v-card-text class="text-subtitle-1">
                   Moz Local distributes your business information across the web
                   for maximum search engine visibility.
 
@@ -196,7 +196,7 @@
     <v-sheet tile class="py-12" color="primary" dark>
       <v-container>
         <div class="text-center my-12">
-          <h2 class="display-2 font-weight-bold">
+          <h2 class="text-h3 font-weight-bold">
             The world's most accurate SEO data.
           </h2>
         </div>
@@ -211,11 +211,11 @@
                 color="transparent"
               >
                 <v-card-text>
-                  <h2 class="display-3 font-weight-bold white--text">
+                  <h2 class="text-h2 font-weight-bold white--text">
                     36.5 trillion
                   </h2>
 
-                  <p class="title">
+                  <p class="text-h6">
                     links indexed by Link Explorer with our tools
                   </p>
                 </v-card-text>

@@ -4,12 +4,12 @@
       <v-container>
         <v-row justify="center" class="text-center my-12 py-12">
           <v-col cols="12">
-            <h1 class="display-3 font-weight-bold" style="line-height: 1.3;">
+            <h1 class="text-h2 font-weight-bold" style="line-height: 1.3;">
               Imagine what we will <br />
               accomplish together
             </h1>
 
-            <h3 class="my-6 title font-weight-regular">
+            <h3 class="my-6 text-h6 font-weight-regular">
               Powerful analytics tools for your business. See the exact keywords
               for which your <br />
               competitors rank in organic search and the amount of traffic
@@ -39,11 +39,11 @@
     <v-sheet tile class="py-12">
       <v-container>
         <div class="text-center my-12">
-          <h2 class="display-1 font-weight-bold">
+          <h2 class="text-h4 font-weight-bold">
             Meet our intuitive platform
           </h2>
 
-          <p class="title my-6 text--secondary">
+          <p class="text-h6 my-6 text--secondary">
             Self-Service Analytics or ad hoc reporting gives users the ability
             to develop rapid <br />
             reports, empowering users to analyze their data.
@@ -68,13 +68,13 @@
               <br />
 
               <div class="mt-6 mb-1">
-                <h4 class="headline font-weight-bold">
+                <h4 class="text-h5 font-weight-bold">
                   {{ item.title }}
                 </h4>
               </div>
 
               <div>
-                <h5 class="body-1">
+                <h5 class="text-body-1">
                   {{ item.text }}
                 </h5>
               </div>
@@ -88,13 +88,13 @@
       <v-container fill-height>
         <v-row justify="space-between" align="center">
           <v-col cols="12" md="6" lg="5" xl="4">
-            <h4 class="subtitle-1 grey--text text--lighten-1">
+            <h4 class="text-subtitle-1 grey--text text--lighten-1">
               Customer service
             </h4>
-            <h2 class="display-2 my-4">
+            <h2 class="text-h3 my-4">
               Discover effortless customer support
             </h2>
-            <p class="subtitle-1 grey--text text--lighten-1 my-8">
+            <p class="text-subtitle-1 grey--text text--lighten-1 my-8">
               Convert your emails into tickets and keep them all organized in
               one place. Never leave customers' questions unanswered.
             </p>
@@ -130,7 +130,7 @@
 
                     <v-col cols="12" class="mt-5 mb-3">
                       <div>
-                        <h5 class="title">
+                        <h5 class="text-h6">
                           {{ item.text }}
                         </h5>
                       </div>
@@ -153,11 +153,11 @@
     <v-sheet tile class="py-12">
       <v-container>
         <div class="text-center my-12">
-          <h2 class="display-1 font-weight-bold">
+          <h2 class="text-h4 font-weight-bold">
             The tools you get with Impact
           </h2>
 
-          <p class="title my-6 text--secondary">
+          <p class="text-h6 my-6 text--secondary">
             We add new tools and features regularly.
           </p>
         </div>
@@ -205,11 +205,11 @@
               <div class="my-12">
                 <v-row justify="space-between">
                   <v-col cols="12" md="6" lg="5" xl="4">
-                    <h2 class="display-1">
+                    <h2 class="text-h4">
                       {{ detail.text }}
                     </h2>
 
-                    <div class="body-1 my-8">
+                    <div class="text-body-1 my-8">
                       <p>
                         {{ detail.p1 }}
                       </p>
@@ -236,12 +236,12 @@
     <v-sheet tile class="py-12" color="transparent">
       <v-container>
         <div class="text-center my-12">
-          <h2 class="display-1 font-weight-bold">
+          <h2 class="text-h4 font-weight-bold">
             Recommended by leading experts <br />
             in marketing and SEO
           </h2>
 
-          <p class="title my-6 text--secondary">
+          <p class="text-h6 my-6 text--secondary">
             Our products are loved by users worldwide
           </p>
         </div>
@@ -259,7 +259,7 @@
                   <v-card flat outlined>
                     <v-card-text>
                       <v-rating dense :value="10" color="secondary"> </v-rating>
-                      <p class="body-1 my-6">
+                      <p class="text-body-1 my-6">
                         "We use Rocket mainly for its site explorer, and it’s
                         immensely improved how we find link targets. We use it
                         both for getting quick analysis of a site, as well as
@@ -267,9 +267,9 @@
                         deep."
                       </p>
 
-                      <h4 class="title">
+                      <h4 class="text-h6">
                         - James Curran
-                        <span class="body-1">
+                        <span class="text-body-1">
                           Designer Apple
                         </span>
                       </h4>

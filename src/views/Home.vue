@@ -10,11 +10,11 @@
                   PRO
                 </p>
               </template>
-              <h1 class="display-3 font-weight-black">Shock</h1>
+              <h1 class="text-h2 font-weight-black">Shock</h1>
             </v-badge>
 
             <h2
-              class="my-6 grey--text text--lighten-1 display-1 font-weight-medium"
+              class="my-6 grey--text text--lighten-1 text-h4 font-weight-medium"
             >
               The ultimate design system for your <br />
               online business
@@ -33,7 +33,7 @@
               Free Download
             </v-btn>
 
-            <div class="my-6 body-2 grey--text text--lighten-1">
+            <div class="my-6 text-body-2 grey--text text--lighten-1">
               <span>Production by:</span>
               <br />
               <div class="my-6">
@@ -54,7 +54,7 @@
     <v-sheet tile class="py-12">
       <v-container>
         <div class="text-center my-12">
-          <h2 class="display-2 font-weight-bold">
+          <h2 class="text-h3 font-weight-bold">
             What you get?
           </h2>
         </div>
@@ -68,10 +68,10 @@
             </v-col>
             <v-col cols="12" md="5">
               <div>
-                <h3 class="display-1 my-3">Front pages</h3>
+                <h3 class="text-h4 my-3">Front pages</h3>
 
                 <div class="grey--text text--darken-1">
-                  <h4 class="title my-3 font-weight-regular">
+                  <h4 class="text-h6 my-3 font-weight-regular">
                     25 hand-crafted pages for your startup
                   </h4>
                   <div class="my-5">
@@ -112,7 +112,7 @@
 
                     <v-col class="flex-shrink-1">
                       <div>
-                        <h4 class="body-1">
+                        <h4 class="text-body-1">
                           Created by
                         </h4>
                         <h3 class="subtitle font-weight-regular">
@@ -138,13 +138,13 @@
                 <br />
 
                 <div class="mt-6 mb-1">
-                  <h4 class="headline font-weight-bold">
+                  <h4 class="text-h5 font-weight-bold">
                     {{ item.total }}
                   </h4>
                 </div>
 
                 <div>
-                  <h5 class="body-1">
+                  <h5 class="text-body-1">
                     {{ item.text }}
                   </h5>
                 </div>
@@ -157,10 +157,10 @@
           <v-row class="py-12" justify="space-between">
             <v-col cols="12" md="5">
               <div>
-                <h3 class="display-1 my-3">Dashboard</h3>
+                <h3 class="text-h4 my-3">Dashboard</h3>
 
                 <div class="grey--text text--darken-1">
-                  <h4 class="title my-3 font-weight-regular">
+                  <h4 class="text-h6 my-3 font-weight-regular">
                     Over 200 individual components
                   </h4>
                   <div class="my-5">
@@ -201,7 +201,7 @@
 
                     <v-col class="flex-shrink-1">
                       <div>
-                        <h4 class="body-1">
+                        <h4 class="text-body-1">
                           Created by
                         </h4>
                         <h3 class="subtitle font-weight-regular">
@@ -238,13 +238,13 @@
                 <br />
 
                 <div class="mt-6 mb-1">
-                  <h4 class="headline font-weight-bold">
+                  <h4 class="text-h5 font-weight-bold">
                     {{ item.total }}
                   </h4>
                 </div>
 
                 <div>
-                  <h5 class="body-1">
+                  <h5 class="text-body-1">
                     {{ item.text }}
                   </h5>
                 </div>
@@ -258,11 +258,11 @@
     <v-sheet tile class="py-12" color="transparent">
       <v-container>
         <div class="text-center my-12">
-          <h2 class="display-2 font-weight-bold">
+          <h2 class="text-h3 font-weight-bold">
             Awesome Features
           </h2>
 
-          <p class="title my-6">
+          <p class="text-h6 my-6">
             You get all Vuetify components fully customized. Besides, you
             receive numerous <br />
             plugins out of the box and ready to use.
@@ -291,7 +291,7 @@
 
                   <v-col cols="12" class="mt-5 mb-3">
                     <div>
-                      <h5 class="title">
+                      <h5 class="text-h6">
                         {{ item.text }}
                       </h5>
                     </div>
@@ -313,11 +313,11 @@
     <v-sheet tile class="py-12" color="primary" dark>
       <v-container>
         <div class="text-center my-12">
-          <h2 class="display-2 font-weight-bold">
+          <h2 class="text-h3 font-weight-bold">
             Less <strong>work</strong>, more <strong>flow</strong>.
           </h2>
 
-          <p class="title my-6">
+          <p class="text-h6 my-6">
             Boost productivity with BrowserSync. Sass changes are reflected
             instantly and pages scroll <br />
             and refresh on devices as you work.
@@ -325,7 +325,7 @@
         </div>
 
         <v-card outlined light>
-          <v-card-text class="subtitle-1">
+          <v-card-text class="text-subtitle-1">
             <div>
               >$ npm install
               <br />

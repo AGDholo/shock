@@ -10,7 +10,7 @@
         <v-col cols="12" md="8" lg="6" xl="4">
           <v-card outlined class="py-8">
             <v-card-text class="text-center">
-              <h2 class="display-1 black--text font-weight-bold">
+              <h2 class="text-h4 black--text font-weight-bold">
                 Sign in to our platform
               </h2>
 
@@ -39,7 +39,7 @@
                     <div class="d-flex align-center justify-space-between mt-4">
                       <v-checkbox label="Remember me"></v-checkbox>
 
-                      <div class="primary--text subtitle-1">
+                      <div class="primary--text text-subtitle-1">
                         Lost password?
                       </div>
                     </div>
@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="mt-6">
-                      <span class="subtitle-1">
+                      <span class="text-subtitle-1">
                         or login with
                       </span>
 
@@ -81,7 +81,7 @@
 
                       <div class="mt-6">
                         Not registered? 
-                        <span class="primary--text subtitle-1">Create account</span>
+                        <span class="primary--text text-subtitle-1">Create account</span>
                       </div>
                     </div>
                   </v-col>

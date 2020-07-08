@@ -43,7 +43,7 @@
             />
             <v-toolbar-title
               style="cursor: pointer"
-              class="font-weight-bold headline"
+              class="font-weight-bold text-h5"
               @click="$router.push('/')"
             >
               <v-icon large color="secondary">
