@@ -2,7 +2,7 @@
   <div>
     <v-footer color="primary" dark app absolute>
       <v-container>
-        <v-row align="start">
+        <v-row align="center">
           <v-col cols="12" md="3">
             <h4 class="text-h5 font-weight-bold">
               Shock
