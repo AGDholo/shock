@@ -60,6 +60,7 @@
                   v-on="on"
                   class="ml-3 text-capitalize"
                   depressed
+                  large
                 >
                   Front pages
 
@@ -73,6 +74,7 @@
                   :to="item.to"
                   v-for="(item, index) in fontPages"
                   :key="index"
+                  
                 >
                   <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item>
@@ -89,6 +91,7 @@
               :target="item.target"
               :color="item.color"
               class="ml-3 text-capitalize"
+              large
             >
               <v-icon left>
                 {{ item.icon }}
