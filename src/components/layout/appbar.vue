@@ -118,7 +118,7 @@ export default {
       },
       {
         text: "Free Download",
-        href: "https://github.com/heroui/shock",
+        href: "https://github.com/AGDholo/shock",
         target: "_black",
         color: "secondary",
         icon: "mdi-download",

@@ -20,7 +20,7 @@
               class="my-6 text-capitalize"
               x-large
               color="secondary"
-              href="https://github.com/heroui/shock"
+              href="https://github.com/AGDholo/shock"
               target="_black"
             >
               <v-icon left>mdi-download</v-icon>Free Download
