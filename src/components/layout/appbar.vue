@@ -129,7 +129,7 @@ export default {
         to: "/front/pages/index-2",
       },
       {
-        title: "sign-in",
+        title: "Sign-in",
         to: "/front/pages/sign-in",
       },
     ],

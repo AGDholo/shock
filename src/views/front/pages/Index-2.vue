@@ -3,15 +3,8 @@
     <v-sheet tile color="transparent" class="my-12">
       <v-container>
         <v-row align="center" justify="space-between">
-          <v-col cols="12" md="6">
-            <v-img src="https://wx2.sbimg.cn/2020/05/27/GgssHA.png"></v-img>
-          </v-col>
-
           <v-col cols="12" md="6" lg="5" xl="4">
-            <h1
-              class="text-h2 font-weight-bold mb-3"
-              style="line-height: 1.3;"
-            >
+            <h1 class="text-h2 font-weight-bold mb-3" style="line-height: 1.3">
               Tools to grow your traffic
             </h1>
 
@@ -33,6 +26,10 @@
               Create your account
             </v-btn>
           </v-col>
+
+          <v-col cols="12" md="6">
+            <v-img src="/image/data-analyst.png"></v-img>
+          </v-col>
         </v-row>
       </v-container>
     </v-sheet>
@@ -40,9 +37,7 @@
     <v-sheet tile class="py-12">
       <v-container>
         <div class="text-center my-12">
-          <h2 class="text-h3 font-weight-bold">
-            Meet our intuitive platform
-          </h2>
+          <h2 class="text-h3 font-weight-bold">Meet our intuitive platform</h2>
 
           <p class="text-h6 my-6 text--secondary">
             Self-Service Analytics or ad hoc reporting gives users the ability
@@ -54,9 +49,7 @@
         <div class="py-12">
           <v-row align="center" justify="space-between">
             <v-col cols="12" md="6" lg="5" xl="4">
-              <h2 class="text-h4 font-weight-bold mb-3">
-                Site Audit
-              </h2>
+              <h2 class="text-h4 font-weight-bold mb-3">Site Audit</h2>
 
               <p class="text-h6 text--secondary my-6">
                 Site Audit crawls all the pages it finds on your website – then
@@ -71,9 +64,7 @@
 
               <v-btn large class="text-capitalize my-6" color="primary">
                 Learn More
-                <v-icon right>
-                  mdi-bullseye-arrow
-                </v-icon>
+                <v-icon right> mdi-bullseye-arrow </v-icon>
               </v-btn>
             </v-col>
 
@@ -94,9 +85,7 @@
             </v-col>
 
             <v-col cols="12" md="6" lg="5" xl="4">
-              <h2 class="text-h4 font-weight-bold mb-3">
-                Rank Tracker
-              </h2>
+              <h2 class="text-h4 font-weight-bold mb-3">Rank Tracker</h2>
 
               <p class="text-h6 text--secondary my-6">
                 We track your desktop and mobile keyword rankings from any
@@ -111,9 +100,7 @@
 
               <v-btn large class="text-capitalize my-6" color="primary">
                 Rank Tracker Tool
-                <v-icon right>
-                  mdi-bullseye-arrow
-                </v-icon>
+                <v-icon right> mdi-bullseye-arrow </v-icon>
               </v-btn>
             </v-col>
           </v-row>
@@ -142,9 +129,7 @@
     <v-sheet tile class="py-12" color="transparent">
       <v-container>
         <div class="text-center my-12">
-          <h2 class="text-h3 font-weight-bold">
-            SEO solutions for every need
-          </h2>
+          <h2 class="text-h3 font-weight-bold">SEO solutions for every need</h2>
 
           <p class="text-h6 my-6 text--secondary">
             We build best-in-class SEO software for every situation, from our
@@ -162,9 +147,7 @@
                   src="https://cdn.pixabay.com/photo/2018/03/07/19/51/grass-3206938_1280.jpg"
                 ></v-img>
 
-                <v-card-title class="text-h4">
-                  Rocket Local
-                </v-card-title>
+                <v-card-title class="text-h4"> Rocket Local </v-card-title>
 
                 <v-card-text class="text-subtitle-1">
                   Moz Local distributes your business information across the web
