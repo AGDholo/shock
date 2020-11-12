@@ -132,6 +132,10 @@ export default {
         title: "Sign-in",
         to: "/front/pages/sign-in",
       },
+      {
+        title: "About",
+        to: "/front/pages/about",
+      },
     ],
   }),
 };

@@ -25,6 +25,11 @@ const routes = [
     name: "front-pages-sign-in",
     component: () => import("../views/front/pages/Sign-in.vue"),
   },
+  {
+    path: "/front/pages/about",
+    name: "front-pages-about",
+    component: () => import("../views/front/pages/About.vue"),
+  },
 ];
 
 const router = new VueRouter({
