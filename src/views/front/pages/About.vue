@@ -116,6 +116,13 @@
             <Review />
           </v-col>
         </v-row>
+
+        <div class="text-center mt-6">
+          <v-btn color="primary" large class="text-capitalize">
+            <v-icon left>mdi-book</v-icon>
+            See all stories
+          </v-btn>
+        </div>
       </v-container>
     </v-sheet>
   </div>
