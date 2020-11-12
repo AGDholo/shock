@@ -30,6 +30,11 @@ const routes = [
     name: "front-pages-about",
     component: () => import("../views/front/pages/About.vue"),
   },
+  {
+    path: "/front/pages/price",
+    name: "front-pages-price",
+    component: () => import("../views/front/pages/Price.vue"),
+  },
 ];
 
 const router = new VueRouter({

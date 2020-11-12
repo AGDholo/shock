@@ -28,7 +28,6 @@
       fixed
       app
       flat
-      hide-on-scroll
       class="appbar"
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       color="primary"
@@ -135,6 +134,10 @@ export default {
       {
         title: "About",
         to: "/front/pages/about",
+      },
+      {
+        title: "Price",
+        to: "/front/pages/price",
       },
     ],
   }),
