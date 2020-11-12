@@ -46,13 +46,11 @@
               class="font-weight-bold text-h5"
               @click="$router.push('/')"
             >
-              <v-icon large color="secondary">
-                mdi-feather
-              </v-icon>
+              <v-icon large color="secondary"> mdi-feather </v-icon>
               Hero<span class="secondary--text">UI</span>
             </v-toolbar-title>
 
-            <v-menu offset-y>
+            <v-menu offset-y open-on-hover>
               <template v-slot:activator="{ on }">
                 <v-btn
                   color="primary"
@@ -64,9 +62,7 @@
                 >
                   Front pages
 
-                  <v-icon right>
-                    mdi-arrow-down-circle-outline
-                  </v-icon>
+                  <v-icon right> mdi-arrow-down-circle-outline </v-icon>
                 </v-btn>
               </template>
               <v-list>
@@ -74,7 +70,6 @@
                   :to="item.to"
                   v-for="(item, index) in fontPages"
                   :key="index"
-                  
                 >
                   <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item>
