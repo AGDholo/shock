@@ -11,7 +11,9 @@
               <h1 class="text-h2 font-weight-black">Shock</h1>
             </v-badge>
 
-            <h2 class="my-6 grey--text text--lighten-1 text-h4 font-weight-medium">
+            <h2
+              class="my-6 grey--text text--lighten-1 text-h4 font-weight-medium"
+            >
               The ultimate design system for your
               <br />online business
             </h2>
@@ -62,9 +64,9 @@
                 <h3 class="text-h4 my-3">Front pages</h3>
 
                 <div class="grey--text text--darken-1">
-                  <h4
-                    class="text-h6 my-3 font-weight-regular"
-                  >25 hand-crafted pages for your startup</h4>
+                  <h4 class="text-h6 my-3 font-weight-regular">
+                    25 hand-crafted pages for your startup
+                  </h4>
                   <div class="my-5">
                     <p class="font-weight-regular">
                       Showcase your startup with the front and landing pages it
@@ -75,9 +77,15 @@
                 </div>
 
                 <div class="my-12">
-                  <v-btn color="secondary" class="text-capitalize" large>Front Demo</v-btn>
+                  <v-btn color="secondary" class="text-capitalize" large
+                    >Front Demo</v-btn
+                  >
 
-                  <v-btn outlined large :class="{ 'ml-3': $vuetify.breakpoint.smAndUp }">
+                  <v-btn
+                    outlined
+                    large
+                    :class="{ 'ml-3': $vuetify.breakpoint.smAndUp }"
+                  >
                     <v-icon left>mdi-apps</v-icon>Components
                   </v-btn>
                 </div>
@@ -130,7 +138,9 @@
                 <h3 class="text-h4 my-3">Dashboard</h3>
 
                 <div class="grey--text text--darken-1">
-                  <h4 class="text-h6 my-3 font-weight-regular">Over 200 individual components</h4>
+                  <h4 class="text-h6 my-3 font-weight-regular">
+                    Over 200 individual components
+                  </h4>
                   <div class="my-5">
                     <p class="font-weight-regular">
                       Start your development with a Premium Dashboard built with
@@ -141,9 +151,15 @@
                 </div>
 
                 <div class="my-12">
-                  <v-btn color="primary" class="text-capitalize" large>Dashboard Demo</v-btn>
+                  <v-btn color="primary" class="text-capitalize" large
+                    >Dashboard Demo</v-btn
+                  >
 
-                  <v-btn outlined large :class="{ 'ml-3': $vuetify.breakpoint.smAndUp }">
+                  <v-btn
+                    outlined
+                    large
+                    :class="{ 'ml-3': $vuetify.breakpoint.smAndUp }"
+                  >
                     <v-icon left>mdi-apps</v-icon>Components
                   </v-btn>
                 </div>
@@ -169,14 +185,21 @@
 
             <v-col cols="12" md="6">
               <v-card>
-                <v-img src="https://cdn.pixabay.com/photo/2020/05/11/02/32/colorado-5156229_1280.jpg"></v-img>
+                <v-img
+                  src="https://cdn.pixabay.com/photo/2020/05/11/02/32/colorado-5156229_1280.jpg"
+                ></v-img>
               </v-card>
             </v-col>
           </v-row>
 
           <div class="my-12 text-center">
             <v-row>
-              <v-col cols="6" md="3" v-for="(item, i) in dashboardFeature" :key="i">
+              <v-col
+                cols="6"
+                md="3"
+                v-for="(item, i) in dashboardFeature"
+                :key="i"
+              >
                 <v-avatar size="88" class="elevation-4">
                   <v-icon color="primary" large>{{ item.icon }}</v-icon>
                 </v-avatar>
@@ -212,8 +235,17 @@
         <div>
           <v-row justify="center" align="center">
             <v-col cols="6" md="3" v-for="(item, i) in awesomeFeature" :key="i">
-              <v-card min-height="300px" class="d-flex align-center justify-center" outlined>
-                <v-row align="center" justify="center" class="text-center primary--text" no-gutters>
+              <v-card
+                min-height="300px"
+                class="d-flex align-center justify-center"
+                outlined
+              >
+                <v-row
+                  align="center"
+                  justify="center"
+                  class="text-center primary--text"
+                  no-gutters
+                >
                   <v-col cols="12">
                     <v-icon color="primary" size="48">{{ item.icon }}</v-icon>
                   </v-col>
@@ -240,8 +272,7 @@
         <div class="text-center my-12">
           <h2 class="text-h3 font-weight-bold">
             Less
-            <strong>work</strong>, more
-            <strong>flow</strong>.
+            <strong>work</strong>, more <strong>flow</strong>.
           </h2>
 
           <p class="text-h6 my-6">
@@ -254,13 +285,13 @@
         <v-card outlined light>
           <v-card-text class="text-subtitle-1">
             <div>
-              >$ npm install
+              >$ yarn
               <br />
               <span class="secondary--text">Everything’s installed!</span>
             </div>
 
             <div class="my-6">
-              >$ npm run serve
+              >$ yarn serve
               <br />
               <span class="secondary--text">
                 App running at:
@@ -282,88 +313,88 @@ export default {
       {
         text: "Front Pages",
         icon: "mdi-monitor",
-        total: "25"
+        total: "25",
       },
       {
         text: "Premium Components",
         icon: "mdi-puzzle",
-        total: "500+"
+        total: "500+",
       },
       {
         text: "Vue CLI & Vuetify Loader",
         icon: "mdi-vuejs",
-        total: "Workflow"
+        total: "Workflow",
       },
       {
         text: "Unlimited",
         icon: "mdi-cash-remove",
-        total: "Free"
-      }
+        total: "Free",
+      },
     ],
     dashboardFeature: [
       {
         text: "Dashboard Pages",
         icon: "mdi-monitor",
-        total: "20+"
+        total: "20+",
       },
       {
         text: "Premium Components",
         icon: "mdi-puzzle",
-        total: "500+"
+        total: "500+",
       },
       {
         text: "Vue CLI & Vuetify Loader",
         icon: "mdi-vuejs",
-        total: "Workflow"
+        total: "Workflow",
       },
       {
         text: "Unlimited",
         icon: "mdi-cash-remove",
-        total: "Free"
-      }
+        total: "Free",
+      },
     ],
     awesomeFeature: [
       {
         text: "Vuetify",
         icon: "mdi-vuetify",
-        subtext: "Built with the most popular CSS Framework"
+        subtext: "Built with the most popular CSS Framework",
       },
       {
         text: "sass",
         icon: "mdi-sass",
-        subtext: "Variables and mixins to empower development"
+        subtext: "Variables and mixins to empower development",
       },
       {
         text: "Responsive",
         icon: "mdi-cellphone",
-        subtext: "All pages and components are 100% responsive"
+        subtext: "All pages and components are 100% responsive",
       },
       {
         text: "Vue CLI",
         icon: "mdi-vuejs",
-        subtext: "Vue CLI for a flawless workflow"
+        subtext: "Vue CLI for a flawless workflow",
       },
       {
         text: "Creative rights",
         icon: "mdi-image-multiple",
-        subtext: "All images, icons and fonts are licensed & free to use"
+        subtext: "All images, icons and fonts are licensed & free to use",
       },
       {
         text: "Free",
         icon: "mdi-cash-remove",
-        subtext: "MIT LICENSE & Unlimited Commercial License"
+        subtext: "MIT LICENSE & Unlimited Commercial License",
       },
       {
         text: "Premium support",
         icon: "mdi-face-agent",
-        subtext: "We offer 6+ months of premium support by default"
+        subtext: "We offer 6+ months of premium support by default",
       },
       {
         text: "W3C Validated",
         icon: "mdi-language-html5",
-        subtext: "HTML pages are all valid by W3C Standards"
-      }
-    ]
-  })
+        subtext: "HTML pages are all valid by W3C Standards",
+      },
+    ],
+  }),
 };
 </script>
