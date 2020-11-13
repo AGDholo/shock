@@ -73,11 +73,23 @@
       </v-btn>
     </v-app-bar>
 
-    <router-view />
+    <v-main>
+      <router-view />
 
-    <v-footer app>
-      <!-- -->
-    </v-footer>
+      <v-footer>
+        {{ new Date().getFullYear() }}
+        <span class="ml-2">
+          <strong
+            ><a
+              href="https://heroui.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              >HeroUI</a
+            ></strong
+          >
+        </span>
+      </v-footer>
+    </v-main>
   </div>
 </template>
 
@@ -86,6 +98,11 @@ export default {
   data: () => ({
     drawer: [
       { title: "Back to front", icon: "mdi-arrow-left", to: "/" },
+      {
+        title: "Dashboard",
+        icon: "mdi-home",
+        to: "/dashboard/pages/dashboards/dashboard",
+      },
       {
         title: "Sign-in",
         icon: "mdi-login",

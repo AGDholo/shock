@@ -28,7 +28,7 @@
                         >
                           {{ item.price }}
                         </h2>
-                        <span class="align-self-end">/Mouth</span>
+                        <span class="align-self-end">/Month</span>
                       </div>
 
                       <h2 class="text-h5 mt-4 mb-1">
