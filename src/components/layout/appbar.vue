@@ -139,6 +139,10 @@ export default {
         title: "Price",
         to: "/front/pages/price",
       },
+      {
+        title: "Contact",
+        to: "/front/pages/contact",
+      },
     ],
   }),
 };

@@ -154,7 +154,7 @@
       <v-container>
         <div class="text-center my-12">
           <h2 class="text-h4 font-weight-bold">
-            The tools you get with Impact
+            The tools you get with Shock
           </h2>
 
           <p class="text-h6 my-6 text--secondary">

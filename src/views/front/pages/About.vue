@@ -9,7 +9,7 @@
             </h1>
 
             <h3 class="my-6 text-h6 font-weight-regular">
-              Whether you’re a programmer, designer, freelancer or need Impact
+              Whether you’re a programmer, designer, freelancer or need Shock
               for a whole team our pricing just makes sense.
             </h3>
           </v-col>

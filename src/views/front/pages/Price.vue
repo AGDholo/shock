@@ -103,7 +103,7 @@ export default {
         data: [
           "Users 1",
           "Full access to design tool",
-          "Publish with Impact ® label",
+          "Publish with Shock ® label",
           "Sub-domain publish",
           "1 User",
           "Public Share & Comments",

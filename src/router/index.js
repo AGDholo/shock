@@ -35,6 +35,11 @@ const routes = [
     name: "front-pages-price",
     component: () => import("../views/front/pages/Price.vue"),
   },
+  {
+    path: "/front/pages/contact",
+    name: "front-pages-contact",
+    component: () => import("../views/front/pages/Contact.vue"),
+  },
 ];
 
 const router = new VueRouter({

@@ -6,7 +6,7 @@
           <v-col cols="12">
             <v-badge color="secondary" overlap offset-x="-10">
               <template v-slot:badge>
-                <p class="font-weight-bold">PRO</p>
+                <p class="font-weight-bold">FREE</p>
               </template>
               <h1 class="text-h2 font-weight-black">Shock</h1>
             </v-badge>
