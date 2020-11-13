@@ -21,11 +21,6 @@ const routes = [
     component: () => import("../views/front/pages/Index-2.vue"),
   },
   {
-    path: "/front/pages/sign-in",
-    name: "front-pages-sign-in",
-    component: () => import("../views/front/pages/Sign-in.vue"),
-  },
-  {
     path: "/front/pages/about",
     name: "front-pages-about",
     component: () => import("../views/front/pages/About.vue"),
@@ -39,6 +34,12 @@ const routes = [
     path: "/front/pages/contact",
     name: "front-pages-contact",
     component: () => import("../views/front/pages/Contact.vue"),
+  },
+
+  {
+    path: "/dashboard/pages/sign-in",
+    name: "dashboard-pages-sign-in",
+    component: () => import("../views/dashboard/pages/Sign-in.vue"),
   },
 ];
 

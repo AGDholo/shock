@@ -56,11 +56,7 @@
                       </span>
 
                       <div class="mt-2">
-                        <v-btn
-                          color="light-blue"
-                          icon
-                          large
-                        >
+                        <v-btn color="light-blue" icon large>
                           <v-icon large>
                             mdi-twitter
                           </v-icon>
@@ -80,8 +76,10 @@
                       </div>
 
                       <div class="mt-6">
-                        Not registered? 
-                        <span class="primary--text text-subtitle-1">Create account</span>
+                        Not registered?
+                        <span class="primary--text text-subtitle-1"
+                          >Create account</span
+                        >
                       </div>
                     </div>
                   </v-col>

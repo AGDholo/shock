@@ -74,6 +74,32 @@
                 </v-list-item>
               </v-list>
             </v-menu>
+
+            <v-menu offset-y open-on-hover>
+              <template v-slot:activator="{ on }">
+                <v-btn
+                  color="primary"
+                  dark
+                  v-on="on"
+                  class="ml-3 text-capitalize"
+                  depressed
+                  large
+                >
+                  App pages
+
+                  <v-icon right> mdi-arrow-down-circle-outline </v-icon>
+                </v-btn>
+              </template>
+              <v-list>
+                <v-list-item
+                  :to="item.to"
+                  v-for="(item, index) in appPages"
+                  :key="index"
+                >
+                  <v-list-item-title>{{ item.title }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
           </v-col>
           <v-col class="text-right" v-if="$vuetify.breakpoint.smAndUp">
             <v-btn
@@ -128,10 +154,6 @@ export default {
         to: "/front/pages/index-2",
       },
       {
-        title: "Sign-in",
-        to: "/front/pages/sign-in",
-      },
-      {
         title: "About",
         to: "/front/pages/about",
       },
@@ -142,6 +164,12 @@ export default {
       {
         title: "Contact",
         to: "/front/pages/contact",
+      },
+    ],
+    appPages: [
+      {
+        title: "Sign-in",
+        to: "/front/pages/sign-in",
       },
     ],
   }),
