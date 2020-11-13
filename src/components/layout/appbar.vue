@@ -169,7 +169,7 @@ export default {
     appPages: [
       {
         title: "Sign-in",
-        to: "/front/pages/sign-in",
+        to: "/dashboard/pages/sign-in",
       },
     ],
   }),
