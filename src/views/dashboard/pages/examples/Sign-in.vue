@@ -10,7 +10,7 @@
     <v-container fill-height fluid>
       <v-row justify="center" align="center" class="fill-height">
         <v-col cols="12" md="8" lg="6" xl="4">
-          <v-card outlined class="py-8">
+          <v-card elevation="12" class="py-8">
             <v-card-text class="text-center">
               <h2 class="text-h4 black--text font-weight-bold">
                 Sign in to our platform
