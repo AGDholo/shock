@@ -168,6 +168,10 @@ export default {
     ],
     appPages: [
       {
+        title: "Dashboard",
+        to: "/dashboard/pages/dashboards/dashboard",
+      },
+      {
         title: "Sign-in",
         to: "/dashboard/pages/examples/sign-in",
       },
