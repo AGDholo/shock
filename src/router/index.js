@@ -54,9 +54,10 @@ const routes = [
     component: () => import("../components/root/dashboard"),
     children: [
       {
-        path: "sign-in",
-        name: "dashboard-pages-sign-in",
-        component: () => import("../views/dashboard/pages/Sign-in.vue"),
+        path: "/dashboard/pages/examples/sign-in",
+        name: "dashboard-pages-examples-sign-in",
+        component: () =>
+          import("../views/dashboard/pages/examples/Sign-in.vue"),
       },
     ],
   },
