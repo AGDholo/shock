@@ -3,9 +3,11 @@
     class="fill-height"
     src="https://cdn.pixabay.com/photo/2015/06/08/15/11/typewriter-801921_1280.jpg"
     :aspect-ratio="16 / 9"
+    height="100vh"
+    width="100vw"
     gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
   >
-    <v-container fill-height>
+    <v-container fill-height fluid>
       <v-row justify="center" align="center" class="fill-height">
         <v-col cols="12" md="8" lg="6" xl="4">
           <v-card outlined class="py-8">
