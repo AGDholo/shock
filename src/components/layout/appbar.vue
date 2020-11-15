@@ -175,6 +175,10 @@ export default {
         title: "Sign-in",
         to: "/dashboard/pages/examples/sign-in",
       },
+      {
+        title: "Profile",
+        to: "/dashboard/pages/examples/profile",
+      },
     ],
   }),
 };
