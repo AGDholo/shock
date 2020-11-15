@@ -16,6 +16,8 @@
           v-for="item in drawer"
           :key="item.title"
           :to="item.to"
+          :href="item.href"
+          :target="item.target"
           exact
           color="primary"
         >
@@ -98,6 +100,12 @@ export default {
   data: () => ({
     drawer: [
       { title: "Back to front", icon: "mdi-arrow-left", to: "/" },
+      {
+        title: "Free Download",
+        icon: "mdi-download",
+        href: "https://github.com/AGDholo/shock",
+        target: "_black",
+      },
       {
         title: "Dashboard",
         icon: "mdi-home",
