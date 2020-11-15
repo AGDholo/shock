@@ -1,6 +1,11 @@
 <template>
   <div>
-    <v-navigation-drawer app>
+    <v-navigation-drawer
+      app
+      :mini-variant="$vuetify.breakpoint.lgAndDown"
+      expand-on-hover
+      v-model="drawerDisplay"
+    >
       <v-list-item two-line>
         <v-list-item-content>
           <v-list-item-title class="text-h5 font-weight-black">
@@ -33,6 +38,11 @@
     </v-navigation-drawer>
 
     <v-app-bar app flat color="white">
+      <v-app-bar-nav-icon
+        v-if="$vuetify.breakpoint.lgAndDown"
+        @click="drawerDisplay = !drawerDisplay"
+      />
+
       <v-toolbar-items class="d-flex align-center">
         <v-text-field
           hide-details
@@ -98,6 +108,7 @@
 <script>
 export default {
   data: () => ({
+    drawerDisplay: null,
     drawer: [
       { title: "Back to front", icon: "mdi-arrow-left", to: "/" },
       {
@@ -112,11 +123,19 @@ export default {
         to: "/dashboard/pages/dashboards/dashboard",
       },
       {
+        title: "Profile",
+        icon: "mdi-face-profile",
+        to: "/dashboard/pages/examples/profile",
+      },
+      {
         title: "Sign-in",
         icon: "mdi-login",
         to: "/dashboard/pages/examples/sign-in",
       },
     ],
   }),
+  mounted() {
+    this.drawerDisplay = this.$vuetify.breakpoint.lgAndDown ? false : true;
+  },
 };
 </script>

@@ -60,6 +60,12 @@ const routes = [
           import("../views/dashboard/pages/dashboards/Dashboard.vue"),
       },
       {
+        path: "/dashboard/pages/examples/profile",
+        name: "dashboard-pages-examples-profile",
+        component: () =>
+          import("../views/dashboard/pages/examples/Profile.vue"),
+      },
+      {
         path: "/dashboard/pages/examples/sign-in",
         name: "dashboard-pages-examples-sign-in",
         component: () =>
