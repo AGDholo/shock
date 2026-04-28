@@ -44,42 +44,33 @@
       />
 
       <v-toolbar-items class="d-flex align-center">
-        <v-text-field
-          hide-details
-          flat
-          dense
-          outlined
-          solo
-          label="Search"
-          prepend-inner-icon="mdi-magnify"
-        />
+        <div class="subtitle-2 text--secondary">
+          GitHub Repository Analytics
+        </div>
       </v-toolbar-items>
 
       <v-spacer />
 
       <v-btn icon>
         <v-icon>
-          mdi-bell-outline
+          mdi-source-repository
         </v-icon>
       </v-btn>
 
       <v-btn icon>
         <v-icon>
-          mdi-apps-box
+          mdi-chart-donut
         </v-icon>
       </v-btn>
 
-      <v-btn text>
+      <v-btn text href="https://github.com/AGDholo/shock" target="_blank">
         <div class="d-flex align-center">
-          <v-avatar size="32">
-            <img
-              src="https://cdn.pixabay.com/photo/2020/11/08/10/25/dog-5723334_1280.jpg"
-              alt="avatar"
-            />
+          <v-avatar size="32" color="primary">
+            <v-icon dark small>mdi-github</v-icon>
           </v-avatar>
 
           <div class="ml-1 subtitle-2">
-            Admin
+            Source
           </div>
         </div>
       </v-btn>
@@ -110,9 +101,9 @@ export default {
   data: () => ({
     drawerDisplay: null,
     drawer: [
-      { title: "Back to front", icon: "mdi-arrow-left", to: "/" },
+      { title: "Repository Overview", icon: "mdi-view-dashboard", to: "/" },
       {
-        title: "Free Download",
+        title: "Source Repository",
         icon: "mdi-download",
         href: "https://github.com/AGDholo/shock",
         target: "_black",
