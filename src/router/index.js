@@ -7,11 +7,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    component: () => import("../components/root/front"),
+    component: () => import("../components/root/dashboard"),
     children: [
       {
         path: "/",
-        name: "Home",
+        name: "repo-analysis",
         component: Home,
       },
     ],

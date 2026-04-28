@@ -1,400 +1,647 @@
 <template>
-  <div>
-    <v-sheet tile color="primary" dark>
-      <v-container>
-        <v-row justify="center" class="text-center my-12 py-12">
-          <v-col cols="12">
-            <v-badge color="secondary" overlap offset-x="-10">
-              <template v-slot:badge>
-                <p class="font-weight-bold">FREE</p>
-              </template>
-              <h1 class="text-h2 font-weight-black">Shock</h1>
-            </v-badge>
+  <div class="analytics-page px-4 px-md-6 py-4 py-md-6">
+    <div class="hero-panel">
+      <div>
+        <div class="eyebrow">Repository Intelligence</div>
+        <h1 class="hero-title">
+          {{ repoTitle }}
+        </h1>
+        <p class="hero-copy">
+          后端动态指定仓库，前端只负责展示代码体量、语言分布、核心贡献者和提交节奏。
+        </p>
+      </div>
 
-            <h2
-              class="my-6 grey--text text--lighten-1 text-h4 font-weight-medium"
-            >
-              The ultimate design system for your
-              <br />online business
-            </h2>
-
-            <v-btn
-              class="my-6 text-capitalize"
-              x-large
-              color="secondary"
-              href="https://github.com/AGDholo/shock"
-              target="_black"
-            >
-              <v-icon left>mdi-download</v-icon>Free Download
-            </v-btn>
-
-            <div class="my-6 text-body-2 grey--text text--lighten-1">
-              <span>Production by:</span>
-              <br />
-              <div class="my-6">
-                <v-avatar color="secondary">
-                  <v-icon large>mdi-feather</v-icon>
-                </v-avatar>
-                <br />
-                <div class="mt-2">HeroUI</div>
-              </div>
-            </div>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-sheet>
-
-    <v-sheet tile class="py-12">
-      <v-container>
-        <div class="text-center my-12">
-          <h2 class="text-h3 font-weight-bold">What you get?</h2>
+      <div class="hero-meta">
+        <div class="meta-chip">
+          <span class="meta-label">Branch</span>
+          <span class="meta-value">{{ analysis.repository.branch }}</span>
         </div>
-
-        <div class="my-12">
-          <v-row class="py-12" justify="space-between">
-            <v-col cols="12" md="6">
-              <v-card>
-                <v-img
-                  src="https://cdn.pixabay.com/photo/2020/05/14/15/46/puffins-5170171_1280.jpg"
-                ></v-img>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="5">
-              <div>
-                <h3 class="text-h4 my-3">Front pages</h3>
-
-                <div class="grey--text text--darken-1">
-                  <h4 class="text-h6 my-3 font-weight-regular">
-                    25 hand-crafted pages for your startup
-                  </h4>
-                  <div class="my-5">
-                    <p class="font-weight-regular">
-                      Showcase your startup with the front and landing pages it
-                      deserves. With a lot of care we developed some of the best
-                      presentational pages you can get.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="my-12">
-                  <v-btn color="secondary" class="text-capitalize" large
-                    >Front Demo</v-btn
-                  >
-
-                  <v-btn
-                    outlined
-                    large
-                    :class="{ 'ml-3': $vuetify.breakpoint.smAndUp }"
-                  >
-                    <v-icon left>mdi-apps</v-icon>Components
-                  </v-btn>
-                </div>
-
-                <div class="my-12">
-                  <v-row align="center">
-                    <v-col class="flex-grow-0">
-                      <v-avatar color="secondary">
-                        <v-icon large dark>mdi-feather</v-icon>
-                      </v-avatar>
-                    </v-col>
-
-                    <v-col class="flex-shrink-1">
-                      <div>
-                        <h4 class="text-body-1">Created by</h4>
-                        <h3 class="subtitle font-weight-regular">HeroUI</h3>
-                      </div>
-                    </v-col>
-                  </v-row>
-                </div>
-              </div>
-            </v-col>
-          </v-row>
-
-          <div class="my-12 text-center">
-            <v-row>
-              <v-col cols="6" md="3" v-for="(item, i) in frontFeature" :key="i">
-                <v-avatar size="88" class="elevation-4">
-                  <v-icon color="secondary" large>{{ item.icon }}</v-icon>
-                </v-avatar>
-
-                <br />
-
-                <div class="mt-6 mb-1">
-                  <h4 class="text-h5 font-weight-bold">{{ item.total }}</h4>
-                </div>
-
-                <div>
-                  <h5 class="text-body-1">{{ item.text }}</h5>
-                </div>
-              </v-col>
-            </v-row>
-          </div>
+        <div class="meta-chip">
+          <span class="meta-label">Updated</span>
+          <span class="meta-value">{{ updatedLabel }}</span>
         </div>
-
-        <div class="my-12">
-          <v-row class="py-12" justify="space-between">
-            <v-col cols="12" md="5">
-              <div>
-                <h3 class="text-h4 my-3">Dashboard</h3>
-
-                <div class="grey--text text--darken-1">
-                  <h4 class="text-h6 my-3 font-weight-regular">
-                    Over 200 individual components
-                  </h4>
-                  <div class="my-5">
-                    <p class="font-weight-regular">
-                      Start your development with a Premium Dashboard built with
-                      over 200 individual components, giving you the freedom of
-                      choosing and combining.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="my-12">
-                  <v-btn color="primary" class="text-capitalize" large
-                    >Dashboard Demo</v-btn
-                  >
-
-                  <v-btn
-                    outlined
-                    large
-                    :class="{ 'ml-3': $vuetify.breakpoint.smAndUp }"
-                  >
-                    <v-icon left>mdi-apps</v-icon>Components
-                  </v-btn>
-                </div>
-
-                <div class="my-12">
-                  <v-row align="center">
-                    <v-col class="flex-grow-0">
-                      <v-avatar color="primary">
-                        <v-icon large dark>mdi-feather</v-icon>
-                      </v-avatar>
-                    </v-col>
-
-                    <v-col class="flex-shrink-1">
-                      <div>
-                        <h4 class="text-body-1">Created by</h4>
-                        <h3 class="subtitle font-weight-regular">HeroUI</h3>
-                      </div>
-                    </v-col>
-                  </v-row>
-                </div>
-              </div>
-            </v-col>
-
-            <v-col cols="12" md="6">
-              <v-card>
-                <v-img
-                  src="https://cdn.pixabay.com/photo/2020/05/11/02/32/colorado-5156229_1280.jpg"
-                ></v-img>
-              </v-card>
-            </v-col>
-          </v-row>
-
-          <div class="my-12 text-center">
-            <v-row>
-              <v-col
-                cols="6"
-                md="3"
-                v-for="(item, i) in dashboardFeature"
-                :key="i"
-              >
-                <v-avatar size="88" class="elevation-4">
-                  <v-icon color="primary" large>{{ item.icon }}</v-icon>
-                </v-avatar>
-
-                <br />
-
-                <div class="mt-6 mb-1">
-                  <h4 class="text-h5 font-weight-bold">{{ item.total }}</h4>
-                </div>
-
-                <div>
-                  <h5 class="text-body-1">{{ item.text }}</h5>
-                </div>
-              </v-col>
-            </v-row>
-          </div>
+        <div class="meta-chip">
+          <span class="meta-label">Source</span>
+          <span class="meta-value">{{ sourceLabel }}</span>
         </div>
-      </v-container>
-    </v-sheet>
+      </div>
+    </div>
 
-    <v-sheet tile class="py-12" color="transparent">
-      <v-container>
-        <div class="text-center my-12">
-          <h2 class="text-h3 font-weight-bold">Awesome Features</h2>
+    <v-alert
+      v-if="source === 'fallback'"
+      class="mt-4"
+      border="left"
+      colored-border
+      color="warning"
+      icon="mdi-database-alert-outline"
+    >
+      当前未从 `/api/repository/analysis` 取到数据，页面正在展示内置样例结果，接口接通后会自动切换。
+    </v-alert>
 
-          <p class="text-h6 my-6">
-            You get all Vuetify components fully customized. Besides, you
-            receive numerous
-            <br />plugins out of the box and ready to use.
-          </p>
-        </div>
+    <v-progress-linear
+      v-if="loading"
+      indeterminate
+      color="primary"
+      rounded
+      class="mt-4"
+    />
 
-        <div>
-          <v-row justify="center" align="center">
-            <v-col cols="6" md="3" v-for="(item, i) in awesomeFeature" :key="i">
-              <v-card
-                min-height="300px"
-                class="d-flex align-center justify-center"
-                outlined
-              >
-                <v-row
-                  align="center"
-                  justify="center"
-                  class="text-center primary--text"
-                  no-gutters
-                >
-                  <v-col cols="12">
-                    <v-icon color="primary" size="48">{{ item.icon }}</v-icon>
-                  </v-col>
-
-                  <v-col cols="12" class="mt-5 mb-3">
-                    <div>
-                      <h5 class="text-h6">{{ item.text }}</h5>
-                    </div>
-                  </v-col>
-
-                  <v-col cols="12" md="8">
-                    <p>{{ item.subtext }}</p>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-col>
-          </v-row>
-        </div>
-      </v-container>
-    </v-sheet>
-
-    <v-sheet tile class="py-12" color="primary" dark>
-      <v-container>
-        <div class="text-center my-12">
-          <h2 class="text-h3 font-weight-bold">
-            Less
-            <strong>work</strong>, more <strong>flow</strong>.
-          </h2>
-
-          <p class="text-h6 my-6">
-            Boost productivity with BrowserSync. Sass changes are reflected
-            instantly and pages scroll
-            <br />and refresh on devices as you work.
-          </p>
-        </div>
-
-        <v-card outlined light>
-          <v-card-text class="text-subtitle-1">
+    <v-row class="mt-2">
+      <v-col
+        v-for="item in statCards"
+        :key="item.label"
+        cols="12"
+        md="6"
+        xl="3"
+      >
+        <v-card class="metric-card" outlined>
+          <div class="metric-top">
             <div>
-              >$ yarn
-              <br />
-              <span class="secondary--text">Everything’s installed!</span>
+              <div class="metric-label">{{ item.label }}</div>
+              <div class="metric-value">{{ item.value }}</div>
             </div>
-
-            <div class="my-6">
-              >$ yarn serve
-              <br />
-              <span class="secondary--text">
-                App running at:
-                <br />- Local: http://localhost:8080/
-              </span>
-            </div>
-          </v-card-text>
+            <v-avatar :color="item.color" size="52">
+              <v-icon dark>{{ item.icon }}</v-icon>
+            </v-avatar>
+          </div>
+          <div class="metric-note">{{ item.note }}</div>
         </v-card>
-      </v-container>
-    </v-sheet>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="12" xl="8">
+        <v-card class="panel-card" outlined>
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Commit Rhythm</div>
+              <div class="panel-title">提交频率趋势</div>
+            </div>
+            <div class="panel-caption">
+              最近 {{ analysis.commitFrequency.length }} 个时间点
+            </div>
+          </div>
+
+          <apexchart
+            v-if="chartReady"
+            height="340"
+            type="area"
+            :options="commitChartOptions"
+            :series="commitChartSeries"
+          />
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" md="6" xl="4">
+        <v-card class="panel-card panel-fill" outlined>
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Language Mix</div>
+              <div class="panel-title">语言占比</div>
+            </div>
+          </div>
+
+          <apexchart
+            v-if="chartReady"
+            height="340"
+            type="donut"
+            :options="languageChartOptions"
+            :series="languageChartSeries"
+          />
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="12" lg="7">
+        <v-card class="panel-card" outlined>
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Code Volume</div>
+              <div class="panel-title">语言代码行数</div>
+            </div>
+          </div>
+
+          <apexchart
+            v-if="chartReady"
+            height="360"
+            type="bar"
+            :options="linesChartOptions"
+            :series="linesChartSeries"
+          />
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" lg="5">
+        <v-card class="panel-card panel-fill" outlined>
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Top Contributors</div>
+              <div class="panel-title">主要贡献者</div>
+            </div>
+          </div>
+
+          <div class="contributors">
+            <div
+              v-for="contributor in analysis.contributors"
+              :key="contributor.name"
+              class="contributor-row"
+            >
+              <div class="d-flex align-center">
+                <v-avatar color="#dbeafe" size="42">
+                  <span class="avatar-text">
+                    {{ initials(contributor.name) }}
+                  </span>
+                </v-avatar>
+                <div class="ml-3">
+                  <div class="contributor-name">{{ contributor.name }}</div>
+                  <div class="contributor-meta">
+                    +{{ formatNumber(contributor.additions) }} /
+                    -{{ formatNumber(contributor.deletions) }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-right">
+                <div class="contributor-commit">
+                  {{ formatNumber(contributor.commits) }}
+                </div>
+                <div class="contributor-meta">commits</div>
+              </div>
+            </div>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="12">
+        <v-card class="panel-card" outlined>
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Language Details</div>
+              <div class="panel-title">代码统计明细</div>
+            </div>
+          </div>
+
+          <v-simple-table class="stats-table">
+            <template v-slot:default>
+              <thead>
+                <tr>
+                  <th>语言</th>
+                  <th>代码行数</th>
+                  <th>占比</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="language in analysis.languages"
+                  :key="language.name"
+                >
+                  <td>
+                    <div class="d-flex align-center">
+                      <span
+                        class="language-dot mr-3"
+                        :style="{ backgroundColor: language.color }"
+                      ></span>
+                      {{ language.name }}
+                    </div>
+                  </td>
+                  <td>{{ formatNumber(language.lines) }}</td>
+                  <td>{{ language.percentage }}%</td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
+import {
+  fetchRepositoryAnalysis,
+  formatDateLabel,
+} from "@/services/repositoryAnalysis";
+
 export default {
   name: "Home",
   data: () => ({
-    frontFeature: [
-      {
-        text: "Front Pages",
-        icon: "mdi-monitor",
-        total: "25",
+    loading: true,
+    chartReady: false,
+    source: "api",
+    analysis: {
+      repository: {
+        owner: "",
+        name: "",
+        branch: "",
+        updatedAt: "",
       },
-      {
-        text: "Premium Components",
-        icon: "mdi-puzzle",
-        total: "500+",
+      summary: {
+        totalLines: 0,
+        totalCommits: 0,
+        totalContributors: 0,
+        dominantLanguage: "",
       },
-      {
-        text: "Vue CLI & Vuetify Loader",
-        icon: "mdi-vuejs",
-        total: "Workflow",
-      },
-      {
-        text: "Unlimited",
-        icon: "mdi-cash-remove",
-        total: "Free",
-      },
-    ],
-    dashboardFeature: [
-      {
-        text: "Dashboard Pages",
-        icon: "mdi-monitor",
-        total: "20+",
-      },
-      {
-        text: "Premium Components",
-        icon: "mdi-puzzle",
-        total: "500+",
-      },
-      {
-        text: "Vue CLI & Vuetify Loader",
-        icon: "mdi-vuejs",
-        total: "Workflow",
-      },
-      {
-        text: "Unlimited",
-        icon: "mdi-cash-remove",
-        total: "Free",
-      },
-    ],
-    awesomeFeature: [
-      {
-        text: "Vuetify",
-        icon: "mdi-vuetify",
-        subtext: "Built with the most popular CSS Framework",
-      },
-      {
-        text: "sass",
-        icon: "mdi-sass",
-        subtext: "Variables and mixins to empower development",
-      },
-      {
-        text: "Responsive",
-        icon: "mdi-cellphone",
-        subtext: "All pages and components are 100% responsive",
-      },
-      {
-        text: "Vue CLI",
-        icon: "mdi-vuejs",
-        subtext: "Vue CLI for a flawless workflow",
-      },
-      {
-        text: "Creative rights",
-        icon: "mdi-image-multiple",
-        subtext: "All images, icons and fonts are licensed & free to use",
-      },
-      {
-        text: "Free",
-        icon: "mdi-cash-remove",
-        subtext: "MIT LICENSE & Unlimited Commercial License",
-      },
-      {
-        text: "Premium support",
-        icon: "mdi-face-agent",
-        subtext: "We offer 6+ months of premium support by default",
-      },
-      {
-        text: "W3C Validated",
-        icon: "mdi-language-html5",
-        subtext: "HTML pages are all valid by W3C Standards",
-      },
-    ],
+      languages: [],
+      contributors: [],
+      commitFrequency: [],
+    },
   }),
+  computed: {
+    repoTitle() {
+      const { owner, name } = this.analysis.repository;
+      return owner && name ? `${owner} / ${name}` : "Repository Dashboard";
+    },
+    updatedLabel() {
+      return formatDateLabel(this.analysis.repository.updatedAt);
+    },
+    sourceLabel() {
+      return this.source === "api" ? "Live API" : "Fallback Sample";
+    },
+    statCards() {
+      return [
+        {
+          label: "总代码行数",
+          value: this.formatNumber(this.analysis.summary.totalLines),
+          note: "按语言汇总的总代码体量",
+          icon: "mdi-code-tags",
+          color: "#0f766e",
+        },
+        {
+          label: "主要语言",
+          value: this.analysis.summary.dominantLanguage,
+          note: "当前仓库占比最高的实现语言",
+          icon: "mdi-layers-triple",
+          color: "#7c3aed",
+        },
+        {
+          label: "贡献者数量",
+          value: this.formatNumber(this.analysis.summary.totalContributors),
+          note: "已识别的核心贡献者数量",
+          icon: "mdi-account-group",
+          color: "#ea580c",
+        },
+        {
+          label: "总提交数",
+          value: this.formatNumber(this.analysis.summary.totalCommits),
+          note: "用于趋势统计的历史提交量",
+          icon: "mdi-source-commit",
+          color: "#2563eb",
+        },
+      ];
+    },
+    commitChartOptions() {
+      return {
+        chart: {
+          toolbar: { show: false },
+          zoom: { enabled: false },
+          foreColor: "#475569",
+        },
+        colors: ["#2563eb"],
+        dataLabels: { enabled: false },
+        fill: {
+          type: "gradient",
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.35,
+            opacityTo: 0.04,
+            stops: [0, 90, 100],
+          },
+        },
+        grid: {
+          borderColor: "#e2e8f0",
+          strokeDashArray: 4,
+        },
+        stroke: {
+          curve: "smooth",
+          width: 3,
+        },
+        xaxis: {
+          categories: this.analysis.commitFrequency.map((item) =>
+            formatDateLabel(item.date)
+          ),
+          axisBorder: { show: false },
+          axisTicks: { show: false },
+        },
+        yaxis: {
+          labels: {
+            formatter: (value) => `${Math.round(value)}`,
+          },
+        },
+        tooltip: {
+          theme: "light",
+        },
+      };
+    },
+    commitChartSeries() {
+      return [
+        {
+          name: "Commits",
+          data: this.analysis.commitFrequency.map((item) => item.count),
+        },
+      ];
+    },
+    languageChartOptions() {
+      return {
+        chart: {
+          foreColor: "#475569",
+        },
+        labels: this.analysis.languages.map((item) => item.name),
+        colors: this.analysis.languages.map((item) => item.color),
+        legend: {
+          position: "bottom",
+          fontSize: "14px",
+        },
+        stroke: {
+          colors: ["#ffffff"],
+        },
+        dataLabels: {
+          enabled: true,
+          formatter: (value) => `${value.toFixed(1)}%`,
+        },
+        plotOptions: {
+          pie: {
+            donut: {
+              size: "68%",
+              labels: {
+                show: true,
+                total: {
+                  show: true,
+                  label: "LOC",
+                  formatter: () =>
+                    this.formatNumber(this.analysis.summary.totalLines),
+                },
+              },
+            },
+          },
+        },
+      };
+    },
+    languageChartSeries() {
+      return this.analysis.languages.map((item) => item.percentage);
+    },
+    linesChartOptions() {
+      return {
+        chart: {
+          toolbar: { show: false },
+          foreColor: "#475569",
+        },
+        colors: this.analysis.languages.map((item) => item.color),
+        plotOptions: {
+          bar: {
+            borderRadius: 6,
+            distributed: true,
+            columnWidth: "48%",
+          },
+        },
+        dataLabels: { enabled: false },
+        legend: { show: false },
+        xaxis: {
+          categories: this.analysis.languages.map((item) => item.name),
+          axisBorder: { show: false },
+          axisTicks: { show: false },
+        },
+        yaxis: {
+          labels: {
+            formatter: (value) => this.formatNumber(value),
+          },
+        },
+        grid: {
+          borderColor: "#e2e8f0",
+          strokeDashArray: 4,
+        },
+      };
+    },
+    linesChartSeries() {
+      return [
+        {
+          name: "Lines",
+          data: this.analysis.languages.map((item) => item.lines),
+        },
+      ];
+    },
+  },
+  async mounted() {
+    const { data, source } = await fetchRepositoryAnalysis();
+    this.analysis = data;
+    this.source = source;
+    this.loading = false;
+    this.chartReady = true;
+  },
+  methods: {
+    formatNumber(value) {
+      return new Intl.NumberFormat("en-US").format(value || 0);
+    },
+    initials(name) {
+      return (name || "")
+        .split(/[\s\-_/.-]+/)
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((part) => part[0].toUpperCase())
+        .join("");
+    },
+  },
 };
 </script>
+
+<style scoped>
+.analytics-page {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.14), transparent 34%),
+    radial-gradient(circle at top right, rgba(13, 148, 136, 0.12), transparent 28%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+}
+
+.hero-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 58%, #0f766e 100%);
+  color: #fff;
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.18);
+}
+
+.eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-title {
+  margin-top: 12px;
+  font-size: 38px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.hero-copy {
+  max-width: 640px;
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-meta {
+  display: grid;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.meta-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.meta-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.meta-value {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.metric-card,
+.panel-card {
+  border-radius: 22px !important;
+  border-color: rgba(148, 163, 184, 0.2) !important;
+  background: rgba(255, 255, 255, 0.84) !important;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+}
+
+.metric-card {
+  padding: 24px;
+}
+
+.metric-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.metric-label,
+.panel-kicker {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #64748b;
+}
+
+.metric-value {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.metric-note,
+.panel-caption,
+.contributor-meta {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.metric-note {
+  margin-top: 16px;
+}
+
+.panel-card {
+  padding: 24px;
+}
+
+.panel-fill {
+  height: 100%;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.panel-title {
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.contributors {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.contributor-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.contributor-row:last-child {
+  border-bottom: 0;
+}
+
+.avatar-text {
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.contributor-name {
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contributor-commit {
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.stats-table th {
+  color: #64748b !important;
+  font-size: 12px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.language-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+@media (max-width: 960px) {
+  .hero-panel {
+    flex-direction: column;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+}
+</style>
