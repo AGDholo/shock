@@ -1,12 +1,13 @@
 <template>
   <div>
-    <v-sheet tile color="primary" dark>
+    <!-- ==================== HERO / PROJECT INTRO ==================== -->
+    <v-sheet tile color="primary" dark class="hero-section">
       <v-container>
         <v-row justify="center" class="text-center my-12 py-12">
-          <v-col cols="12">
+          <v-col cols="12" md="10" lg="8">
             <v-badge color="secondary" overlap offset-x="-10">
               <template v-slot:badge>
-                <p class="font-weight-bold">FREE</p>
+                <p class="font-weight-bold mb-0">FREE</p>
               </template>
               <h1 class="text-h2 font-weight-black">Shock</h1>
             </v-badge>
@@ -14,292 +15,336 @@
             <h2
               class="my-6 grey--text text--lighten-1 text-h4 font-weight-medium"
             >
-              The ultimate design system for your
-              <br />online business
+              A complete Vuetify template
+              <br />for your online business
             </h2>
 
-            <v-btn
-              class="my-6 text-capitalize"
-              x-large
-              color="secondary"
-              href="https://github.com/AGDholo/shock"
-              target="_black"
+            <p
+              class="text-h6 font-weight-light grey--text text--lighten-2 mb-8 mx-auto"
+              style="max-width: 720px"
             >
-              <v-icon left>mdi-download</v-icon>Free Download
-            </v-btn>
+              Open-source, MIT-licensed, and built on Vuetify — Shock pairs
+              hand-crafted front pages with a feature-rich dashboard so you can
+              ship your next product faster.
+            </p>
 
-            <div class="my-6 text-body-2 grey--text text--lighten-1">
-              <span>Production by:</span>
-              <br />
-              <div class="my-6">
-                <v-avatar color="secondary">
-                  <v-icon large>mdi-feather</v-icon>
-                </v-avatar>
-                <br />
-                <div class="mt-2">HeroUI</div>
-              </div>
+            <div class="my-8">
+              <v-btn
+                class="text-capitalize ma-2"
+                x-large
+                color="secondary"
+                href="https://github.com/AGDholo/shock"
+                target="_blank"
+                rel="noopener"
+              >
+                <v-icon left>mdi-github</v-icon>View on GitHub
+              </v-btn>
+
+              <v-btn
+                class="text-capitalize ma-2"
+                x-large
+                outlined
+                href="https://shock.heroui.net/"
+                target="_blank"
+                rel="noopener"
+              >
+                <v-icon left>mdi-eye-outline</v-icon>Live Demo
+              </v-btn>
+            </div>
+
+            <div class="mt-12">
+              <v-chip
+                v-for="tag in heroTags"
+                :key="tag.text"
+                class="ma-1"
+                color="rgba(255,255,255,0.12)"
+                text-color="white"
+                small
+              >
+                <v-icon left small>{{ tag.icon }}</v-icon>
+                {{ tag.text }}
+              </v-chip>
             </div>
           </v-col>
         </v-row>
       </v-container>
     </v-sheet>
 
+    <!-- ==================== ABOUT THE PROJECT ==================== -->
     <v-sheet tile class="py-12">
       <v-container>
         <div class="text-center my-12">
-          <h2 class="text-h3 font-weight-bold">What you get?</h2>
+          <p
+            class="text-overline secondary--text font-weight-bold mb-2"
+          >
+            About the Project
+          </p>
+          <h2 class="text-h3 font-weight-bold">What is Shock?</h2>
+          <p
+            class="text-h6 my-6 mx-auto grey--text text--darken-2 font-weight-regular"
+            style="max-width: 760px"
+          >
+            Shock is an open-source Vuetify theme for new businesses, startups,
+            and digital products. It bundles a polished marketing site and a
+            full admin dashboard into a single, MIT-licensed codebase — so you
+            can stop wiring boilerplate and start shipping.
+          </p>
         </div>
 
-        <div class="my-12">
-          <v-row class="py-12" justify="space-between">
-            <v-col cols="12" md="6">
-              <v-card>
-                <v-img
-                  src="https://cdn.pixabay.com/photo/2020/05/14/15/46/puffins-5170171_1280.jpg"
-                ></v-img>
-              </v-card>
-            </v-col>
-            <v-col cols="12" md="5">
-              <div>
-                <h3 class="text-h4 my-3">Front pages</h3>
+        <v-row justify="center" class="my-12">
+          <v-col
+            cols="6"
+            md="3"
+            v-for="(item, i) in stats"
+            :key="i"
+            class="text-center"
+          >
+            <h3 class="text-h2 font-weight-black primary--text">
+              {{ item.total }}
+            </h3>
+            <h4 class="text-body-1 grey--text text--darken-1 mt-2">
+              {{ item.text }}
+            </h4>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-sheet>
 
-                <div class="grey--text text--darken-1">
-                  <h4 class="text-h6 my-3 font-weight-regular">
-                    25 hand-crafted pages for your startup
-                  </h4>
-                  <div class="my-5">
-                    <p class="font-weight-regular">
-                      Showcase your startup with the front and landing pages it
-                      deserves. With a lot of care we developed some of the best
-                      presentational pages you can get.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="my-12">
-                  <v-btn color="secondary" class="text-capitalize" large
-                    >Front Demo</v-btn
-                  >
-
-                  <v-btn
-                    outlined
-                    large
-                    :class="{ 'ml-3': $vuetify.breakpoint.smAndUp }"
-                  >
-                    <v-icon left>mdi-apps</v-icon>Components
-                  </v-btn>
-                </div>
-
-                <div class="my-12">
-                  <v-row align="center">
-                    <v-col class="flex-grow-0">
-                      <v-avatar color="secondary">
-                        <v-icon large dark>mdi-feather</v-icon>
-                      </v-avatar>
-                    </v-col>
-
-                    <v-col class="flex-shrink-1">
-                      <div>
-                        <h4 class="text-body-1">Created by</h4>
-                        <h3 class="subtitle font-weight-regular">HeroUI</h3>
-                      </div>
-                    </v-col>
-                  </v-row>
-                </div>
-              </div>
-            </v-col>
-          </v-row>
-
-          <div class="my-12 text-center">
-            <v-row>
-              <v-col cols="6" md="3" v-for="(item, i) in frontFeature" :key="i">
-                <v-avatar size="88" class="elevation-4">
-                  <v-icon color="secondary" large>{{ item.icon }}</v-icon>
-                </v-avatar>
-
-                <br />
-
-                <div class="mt-6 mb-1">
-                  <h4 class="text-h5 font-weight-bold">{{ item.total }}</h4>
-                </div>
-
-                <div>
-                  <h5 class="text-body-1">{{ item.text }}</h5>
-                </div>
-              </v-col>
-            </v-row>
-          </div>
+    <!-- ==================== FEATURE HIGHLIGHTS ==================== -->
+    <v-sheet tile class="py-12" color="grey lighten-5">
+      <v-container>
+        <div class="text-center my-12">
+          <p class="text-overline secondary--text font-weight-bold mb-2">
+            Highlights
+          </p>
+          <h2 class="text-h3 font-weight-bold">Built to ship</h2>
+          <p
+            class="text-h6 my-6 mx-auto grey--text text--darken-2 font-weight-regular"
+            style="max-width: 760px"
+          >
+            Every Vuetify component, fully customized — plus a modern build
+            pipeline, responsive layouts, and a permissive license that lets
+            you take it anywhere.
+          </p>
         </div>
 
-        <div class="my-12">
-          <v-row class="py-12" justify="space-between">
-            <v-col cols="12" md="5">
-              <div>
-                <h3 class="text-h4 my-3">Dashboard</h3>
+        <v-row>
+          <v-col
+            cols="12"
+            sm="6"
+            md="4"
+            v-for="(item, i) in features"
+            :key="i"
+          >
+            <v-card class="pa-6 fill-height feature-card" outlined>
+              <v-avatar size="56" color="primary" class="mb-4">
+                <v-icon dark size="28">{{ item.icon }}</v-icon>
+              </v-avatar>
+              <h3 class="text-h6 font-weight-bold mb-2">
+                {{ item.text }}
+              </h3>
+              <p class="text-body-2 grey--text text--darken-1 mb-0">
+                {{ item.subtext }}
+              </p>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-sheet>
 
-                <div class="grey--text text--darken-1">
-                  <h4 class="text-h6 my-3 font-weight-regular">
-                    Over 200 individual components
-                  </h4>
-                  <div class="my-5">
-                    <p class="font-weight-regular">
-                      Start your development with a Premium Dashboard built with
-                      over 200 individual components, giving you the freedom of
-                      choosing and combining.
-                    </p>
-                  </div>
+    <!-- ==================== LIVE DEMO ==================== -->
+    <v-sheet tile class="py-12">
+      <v-container>
+        <div class="text-center my-12">
+          <p class="text-overline secondary--text font-weight-bold mb-2">
+            See it in action
+          </p>
+          <h2 class="text-h3 font-weight-bold">Live Demo</h2>
+          <p
+            class="text-h6 my-6 mx-auto grey--text text--darken-2 font-weight-regular"
+            style="max-width: 760px"
+          >
+            Click around the live preview to explore every front page,
+            dashboard view, and component the template ships with.
+          </p>
+        </div>
+
+        <v-row justify="center">
+          <v-col cols="12" md="10">
+            <v-card class="elevation-12 demo-card">
+              <v-img
+                src="https://cdn.pixabay.com/photo/2020/05/11/02/32/colorado-5156229_1280.jpg"
+                height="380"
+                gradient="to bottom, rgba(6,72,179,.0), rgba(6,72,179,.55)"
+              >
+                <div class="fill-height d-flex align-end pa-6">
+                  <v-chip color="secondary" text-color="white" small>
+                    <v-icon left small>mdi-link-variant</v-icon>
+                    shock.heroui.net
+                  </v-chip>
                 </div>
+              </v-img>
 
-                <div class="my-12">
-                  <v-btn color="primary" class="text-capitalize" large
-                    >Dashboard Demo</v-btn
-                  >
+              <v-card-text class="text-center pa-8">
+                <h3 class="text-h5 font-weight-bold mb-2 black--text">
+                  Try the full template, live
+                </h3>
+                <p class="text-body-1 grey--text text--darken-1 mb-6">
+                  No sign-up, no installation — just open the link and explore.
+                </p>
 
-                  <v-btn
-                    outlined
-                    large
-                    :class="{ 'ml-3': $vuetify.breakpoint.smAndUp }"
-                  >
-                    <v-icon left>mdi-apps</v-icon>Components
-                  </v-btn>
-                </div>
+                <v-btn
+                  color="primary"
+                  large
+                  href="https://shock.heroui.net/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-capitalize ma-2"
+                >
+                  <v-icon left>mdi-open-in-new</v-icon>
+                  Open Live Demo
+                </v-btn>
+                <v-btn
+                  outlined
+                  large
+                  to="/front/pages/index"
+                  class="text-capitalize ma-2"
+                >
+                  <v-icon left>mdi-monitor-dashboard</v-icon>
+                  Browse Pages
+                </v-btn>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-sheet>
 
-                <div class="my-12">
-                  <v-row align="center">
-                    <v-col class="flex-grow-0">
-                      <v-avatar color="primary">
-                        <v-icon large dark>mdi-feather</v-icon>
-                      </v-avatar>
-                    </v-col>
+    <!-- ==================== HOW TO START ==================== -->
+    <v-sheet tile class="py-12" color="grey lighten-5">
+      <v-container>
+        <div class="text-center my-12">
+          <p class="text-overline secondary--text font-weight-bold mb-2">
+            Get Started
+          </p>
+          <h2 class="text-h3 font-weight-bold">Up and running in minutes</h2>
+          <p
+            class="text-h6 my-6 mx-auto grey--text text--darken-2 font-weight-regular"
+            style="max-width: 760px"
+          >
+            Three commands, a hot-reload dev server at
+            <code class="primary--text">localhost:8080</code>, and you are ready
+            to build.
+          </p>
+        </div>
 
-                    <v-col class="flex-shrink-1">
-                      <div>
-                        <h4 class="text-body-1">Created by</h4>
-                        <h3 class="subtitle font-weight-regular">HeroUI</h3>
-                      </div>
-                    </v-col>
-                  </v-row>
-                </div>
-              </div>
-            </v-col>
-
-            <v-col cols="12" md="6">
-              <v-card>
-                <v-img
-                  src="https://cdn.pixabay.com/photo/2020/05/11/02/32/colorado-5156229_1280.jpg"
-                ></v-img>
-              </v-card>
-            </v-col>
-          </v-row>
-
-          <div class="my-12 text-center">
+        <v-row justify="center">
+          <v-col cols="12" md="10">
             <v-row>
               <v-col
-                cols="6"
-                md="3"
-                v-for="(item, i) in dashboardFeature"
+                cols="12"
+                md="4"
+                v-for="(step, i) in steps"
                 :key="i"
               >
-                <v-avatar size="88" class="elevation-4">
-                  <v-icon color="primary" large>{{ item.icon }}</v-icon>
-                </v-avatar>
-
-                <br />
-
-                <div class="mt-6 mb-1">
-                  <h4 class="text-h5 font-weight-bold">{{ item.total }}</h4>
-                </div>
-
-                <div>
-                  <h5 class="text-body-1">{{ item.text }}</h5>
-                </div>
+                <v-card class="pa-6 fill-height step-card" outlined>
+                  <div class="d-flex align-center mb-4">
+                    <v-avatar color="secondary" size="40" class="mr-3">
+                      <span class="white--text font-weight-bold">{{
+                        i + 1
+                      }}</span>
+                    </v-avatar>
+                    <h3 class="text-h6 font-weight-bold mb-0">
+                      {{ step.title }}
+                    </h3>
+                  </div>
+                  <p class="text-body-2 grey--text text--darken-2 mb-4">
+                    {{ step.desc }}
+                  </p>
+                  <v-sheet
+                    color="grey lighten-3"
+                    rounded
+                    class="pa-3 code-block"
+                  >
+                    <code class="text-body-2 primary--text">{{
+                      step.cmd
+                    }}</code>
+                  </v-sheet>
+                </v-card>
               </v-col>
             </v-row>
-          </div>
-        </div>
-      </v-container>
-    </v-sheet>
 
-    <v-sheet tile class="py-12" color="transparent">
-      <v-container>
-        <div class="text-center my-12">
-          <h2 class="text-h3 font-weight-bold">Awesome Features</h2>
-
-          <p class="text-h6 my-6">
-            You get all Vuetify components fully customized. Besides, you
-            receive numerous
-            <br />plugins out of the box and ready to use.
-          </p>
-        </div>
-
-        <div>
-          <v-row justify="center" align="center">
-            <v-col cols="6" md="3" v-for="(item, i) in awesomeFeature" :key="i">
-              <v-card
-                min-height="300px"
-                class="d-flex align-center justify-center"
-                outlined
-              >
-                <v-row
-                  align="center"
-                  justify="center"
-                  class="text-center primary--text"
-                  no-gutters
+            <v-card outlined class="pa-6 mt-8">
+              <h4 class="text-subtitle-1 font-weight-bold mb-4">
+                <v-icon color="secondary" left>mdi-flash-outline</v-icon>
+                Available scripts
+              </h4>
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="4"
+                  v-for="(s, i) in scripts"
+                  :key="i"
                 >
-                  <v-col cols="12">
-                    <v-icon color="primary" size="48">{{ item.icon }}</v-icon>
-                  </v-col>
-
-                  <v-col cols="12" class="mt-5 mb-3">
+                  <div class="d-flex align-start">
+                    <v-icon color="primary" small class="mr-2 mt-1"
+                      >mdi-chevron-right</v-icon
+                    >
                     <div>
-                      <h5 class="text-h6">{{ item.text }}</h5>
+                      <code class="primary--text font-weight-bold">{{
+                        s.cmd
+                      }}</code>
+                      <p
+                        class="text-caption grey--text text--darken-1 mb-0 mt-1"
+                      >
+                        {{ s.desc }}
+                      </p>
                     </div>
-                  </v-col>
-
-                  <v-col cols="12" md="8">
-                    <p>{{ item.subtext }}</p>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-col>
-          </v-row>
-        </div>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-container>
     </v-sheet>
 
-    <v-sheet tile class="py-12" color="primary" dark>
+    <!-- ==================== FINAL CTA ==================== -->
+    <v-sheet tile color="primary" dark class="py-12">
       <v-container>
-        <div class="text-center my-12">
-          <h2 class="text-h3 font-weight-bold">
-            Less
-            <strong>work</strong>, more <strong>flow</strong>.
-          </h2>
-
-          <p class="text-h6 my-6">
-            Boost productivity with BrowserSync. Sass changes are reflected
-            instantly and pages scroll
-            <br />and refresh on devices as you work.
-          </p>
-        </div>
-
-        <v-card outlined light>
-          <v-card-text class="text-subtitle-1">
-            <div>
-              >$ yarn
-              <br />
-              <span class="secondary--text">Everything’s installed!</span>
-            </div>
-
-            <div class="my-6">
-              >$ yarn serve
-              <br />
-              <span class="secondary--text">
-                App running at:
-                <br />- Local: http://localhost:8080/
-              </span>
-            </div>
-          </v-card-text>
-        </v-card>
+        <v-row justify="center" class="text-center my-12">
+          <v-col cols="12" md="10" lg="8">
+            <h2 class="text-h3 font-weight-black mb-6">
+              Ready to ship faster?
+            </h2>
+            <p class="text-h6 grey--text text--lighten-1 mb-8">
+              Star Shock on GitHub, fork the repo, and start building. MIT
+              licensed — free for personal and commercial projects.
+            </p>
+            <v-btn
+              x-large
+              color="secondary"
+              href="https://github.com/AGDholo/shock"
+              target="_blank"
+              rel="noopener"
+              class="text-capitalize ma-2"
+            >
+              <v-icon left>mdi-github</v-icon>
+              Visit Repository
+            </v-btn>
+            <v-btn
+              x-large
+              outlined
+              href="https://github.com/AGDholo/shock/issues"
+              target="_blank"
+              rel="noopener"
+              class="text-capitalize ma-2"
+            >
+              <v-icon left>mdi-bug-outline</v-icon>
+              Report an Issue
+            </v-btn>
+          </v-col>
+        </v-row>
       </v-container>
     </v-sheet>
   </div>
@@ -309,92 +354,104 @@
 export default {
   name: "Home",
   data: () => ({
-    frontFeature: [
-      {
-        text: "Front Pages",
-        icon: "mdi-monitor",
-        total: "25",
-      },
-      {
-        text: "Premium Components",
-        icon: "mdi-puzzle",
-        total: "500+",
-      },
-      {
-        text: "Vue CLI & Vuetify Loader",
-        icon: "mdi-vuejs",
-        total: "Workflow",
-      },
-      {
-        text: "Unlimited",
-        icon: "mdi-cash-remove",
-        total: "Free",
-      },
+    heroTags: [
+      { text: "Vue 2", icon: "mdi-vuejs" },
+      { text: "Vuetify", icon: "mdi-vuetify" },
+      { text: "Sass", icon: "mdi-sass" },
+      { text: "MIT License", icon: "mdi-shield-check-outline" },
     ],
-    dashboardFeature: [
-      {
-        text: "Dashboard Pages",
-        icon: "mdi-monitor",
-        total: "20+",
-      },
-      {
-        text: "Premium Components",
-        icon: "mdi-puzzle",
-        total: "500+",
-      },
-      {
-        text: "Vue CLI & Vuetify Loader",
-        icon: "mdi-vuejs",
-        total: "Workflow",
-      },
-      {
-        text: "Unlimited",
-        icon: "mdi-cash-remove",
-        total: "Free",
-      },
+    stats: [
+      { text: "Front Pages", total: "25" },
+      { text: "Dashboard Pages", total: "20+" },
+      { text: "Components", total: "500+" },
+      { text: "Cost", total: "Free" },
     ],
-    awesomeFeature: [
+    features: [
       {
-        text: "Vuetify",
+        text: "Vuetify-Powered",
         icon: "mdi-vuetify",
-        subtext: "Built with the most popular CSS Framework",
+        subtext:
+          "Built on the most popular Vue UI framework, with every component thoughtfully styled to match.",
       },
       {
-        text: "sass",
+        text: "Sass Variables",
         icon: "mdi-sass",
-        subtext: "Variables and mixins to empower development",
+        subtext:
+          "Variables and mixins included to make theming and brand customization a breeze.",
       },
       {
-        text: "Responsive",
-        icon: "mdi-cellphone",
-        subtext: "All pages and components are 100% responsive",
+        text: "Fully Responsive",
+        icon: "mdi-cellphone-link",
+        subtext:
+          "Every page and component is 100% responsive — mobile-first, desktop-ready.",
       },
       {
-        text: "Vue CLI",
+        text: "Vue CLI Workflow",
         icon: "mdi-vuejs",
-        subtext: "Vue CLI for a flawless workflow",
+        subtext:
+          "Modern build pipeline with hot-reload, Sass, and Vuetify-Loader out of the box.",
       },
       {
-        text: "Creative rights",
-        icon: "mdi-image-multiple",
-        subtext: "All images, icons and fonts are licensed & free to use",
+        text: "Front + Dashboard",
+        icon: "mdi-view-dashboard-variant",
+        subtext:
+          "25 hand-crafted marketing pages plus a feature-rich admin dashboard, in one repo.",
       },
       {
-        text: "Free",
-        icon: "mdi-cash-remove",
-        subtext: "MIT LICENSE & Unlimited Commercial License",
+        text: "MIT Licensed",
+        icon: "mdi-shield-check-outline",
+        subtext:
+          "Free for personal projects, client work, and commercial products — forever.",
+      },
+    ],
+    steps: [
+      {
+        title: "Clone the repo",
+        desc: "Grab the source from GitHub and step into the project directory.",
+        cmd: "git clone https://github.com/AGDholo/shock.git",
       },
       {
-        text: "Premium support",
-        icon: "mdi-face-agent",
-        subtext: "We offer 6+ months of premium support by default",
+        title: "Install dependencies",
+        desc: "Run yarn (or npm install) to pull in all required packages.",
+        cmd: "yarn",
       },
       {
-        text: "W3C Validated",
-        icon: "mdi-language-html5",
-        subtext: "HTML pages are all valid by W3C Standards",
+        title: "Start the dev server",
+        desc: "Launch a local preview with hot reload on http://localhost:8080.",
+        cmd: "yarn serve",
       },
+    ],
+    scripts: [
+      { cmd: "yarn serve", desc: "Start the development server" },
+      { cmd: "yarn build", desc: "Build for production into /dist" },
+      { cmd: "yarn lint", desc: "Check code formatting" },
     ],
   }),
 };
 </script>
+
+<style scoped>
+.hero-section {
+  background-image: linear-gradient(135deg, #0648b3 0%, #053a93 100%);
+}
+
+.feature-card,
+.step-card,
+.demo-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover,
+.step-card:hover {
+  transform: translateY(-4px);
+}
+
+.code-block code,
+code {
+  background: transparent !important;
+  padding: 0 !important;
+  font-size: 13px;
+  word-break: break-all;
+  font-family: "Fira Code", "Menlo", "Monaco", monospace;
+}
+</style>
